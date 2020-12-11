@@ -9,6 +9,7 @@ class WelcomeBanner extends StatelessWidget {
         Container(
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height * 0.55,
+          color: Colors.white54.withOpacity(0.25),
         ),
       ],
     );
@@ -27,7 +28,7 @@ class BackgroundImage extends StatelessWidget {
         alignment: Alignment.center,
         child: ColorFiltered(
           colorFilter: ColorFilter.mode(
-            Color(0x23ba8d3a),
+            Color(0xbbba8d3a),
             BlendMode.color,
           ),
           child: Image(
