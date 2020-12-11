@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:travel_mysuru/widgets/custom_appbar.dart';
 import 'package:travel_mysuru/widgets/welcome_banner.dart';
 import 'package:travel_mysuru/widgets/video_card.dart';
+import 'package:travel_mysuru/widgets/selfie_game.dart';
 
 
 class HomeScreen extends StatelessWidget {
@@ -18,6 +19,7 @@ class HomeScreen extends StatelessWidget {
           children: [
             WelcomeBanner(),
             VideoCard(),
+            GameBanner(),
           ],
         ),
       ),

@@ -11,10 +11,10 @@ class VideoCard extends StatelessWidget {
       child: Stack(
         children: [
           Container(
-            margin: EdgeInsets.all(20),
+            margin: EdgeInsets.all(10),
             decoration: BoxDecoration(
               color: Color(0xffb08613),
-              borderRadius: BorderRadius.all(Radius.circular(10)),
+              borderRadius: BorderRadius.all(Radius.circular(40)),
             ),
             child: Container(
               margin: EdgeInsets.all(1.5),
