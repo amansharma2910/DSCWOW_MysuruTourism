@@ -3,19 +3,16 @@ import 'package:flutter/material.dart';
 class WelcomeBanner extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      scrollDirection: Axis.vertical,
-      child: Stack(
-        children: [
-          BackgroundImage(),
-          Container(
-            width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height * 0.55,
-            color: Colors.black45.withOpacity(0.4),
-          ),
-          WelcomeText(),
-        ],
-      ),
+    return Stack(
+      children: [
+        BackgroundImage(),
+        Container(
+          width: MediaQuery.of(context).size.width,
+          height: MediaQuery.of(context).size.height * 0.9,
+          color: Colors.black45.withOpacity(0.4),
+        ),
+        WelcomeText(),
+      ],
     );
   }
 }
@@ -25,7 +22,7 @@ class BackgroundImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width,
-      height: MediaQuery.of(context).size.height * 0.55,
+      height: MediaQuery.of(context).size.height * 0.9,
       child: FittedBox(
         fit: BoxFit.cover,
         alignment: Alignment.center,
@@ -48,7 +45,7 @@ class WelcomeText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width,
-      height: MediaQuery.of(context).size.height * 0.55,
+      height: MediaQuery.of(context).size.height * 0.9,
       child: Padding(
         padding: EdgeInsets.all(30),
         child: Column(
@@ -89,7 +86,9 @@ class WelcomeText extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: 10,),
+            SizedBox(
+              height: 10,
+            ),
             Text(
               "Get ready to be mesmerized \nby it's beauty..",
               style: TextStyle(
@@ -105,6 +104,20 @@ class WelcomeText extends StatelessWidget {
                   ),
                 ],
               ),
+            ),
+            SizedBox(
+              height: 30.0,
+            ),
+            Container(
+              child: Icon(Icons.arrow_downward, color: Colors.white),
+            ),
+
+            Container(
+              child: Icon(Icons.arrow_downward, color: Colors.white),
+            ),
+
+            Container(
+              child: Icon(Icons.arrow_downward, color: Colors.white),
             ),
           ],
         ),
