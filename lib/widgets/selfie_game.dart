@@ -45,9 +45,10 @@ class Button extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             RaisedButton(
+
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(18.0),
-                  side: BorderSide(color: Colors.black)
+                  side: BorderSide(color: Colors.black38)
               ),
               child: Text(
                 'Click here to enter game!',
@@ -58,6 +59,7 @@ class Button extends StatelessWidget {
                 ),
 
               ),
+              //TODO: Implement the onclick method to route the app to the game screen once tapped
               // onPressed: playGame(),
             )
           ],
