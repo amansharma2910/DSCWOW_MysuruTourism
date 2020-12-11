@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:travel_mysuru/widgets/custom_appbar.dart';
+import 'package:travel_mysuru/widgets/welcome_banner.dart';
+
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -9,8 +11,10 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: CustomAppBar(),
       ),
-      body: Container(
-        color: Colors.blue,
+      body: Column(
+        children: [
+          WelcomeBanner(),
+        ],
       ),
     );
   }
