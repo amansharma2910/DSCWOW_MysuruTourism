@@ -27,16 +27,15 @@ class VideoCard extends StatelessWidget {
                   Container(
                     margin: EdgeInsets.all(10),
                     decoration: BoxDecoration(
-                        color: Colors.blue,
                         image: DecorationImage(
                             fit: BoxFit.cover,
-                            image: AssetImage('images/yt_thumbnail.png')),
+                            image: AssetImage('images/mysuru_yt_banner.jpg')),
                         borderRadius: BorderRadius.all(Radius.circular(10))),
                   ),
                   Container(
                     margin: EdgeInsets.all(5),
                     decoration: BoxDecoration(
-                      color: Colors.black.withOpacity(0.5),
+                      color: Colors.yellow.withOpacity(0.2),
                       borderRadius: BorderRadius.all(Radius.circular(10)),
                     ),
                     child: Container(
@@ -76,13 +75,14 @@ class _PlayButtonState extends State<PlayButton> {
       height: 60,
       width: 60,
       decoration: BoxDecoration(
-          color: Colors.black.withOpacity(0.4),
+          color: Colors.black.withOpacity(0.5),
           borderRadius: BorderRadius.all(Radius.circular(120))),
       child: IconButton(
         alignment: Alignment.center,
         icon: Icon(
           Icons.play_arrow,
-          color: Colors.white54,
+          color: Colors.white54.withOpacity(0.8),
+          //TODO: Implement the onPressed method that opens the YT video
         ),
         iconSize: 100,
       ),

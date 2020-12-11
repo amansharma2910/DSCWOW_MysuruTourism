@@ -106,18 +106,13 @@ class WelcomeText extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 30.0,
+              height: 50.0,
             ),
-            Container(
-              child: Icon(Icons.arrow_downward, color: Colors.white),
-            ),
-
-            Container(
-              child: Icon(Icons.arrow_downward, color: Colors.white),
-            ),
-
-            Container(
-              child: Icon(Icons.arrow_downward, color: Colors.white),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.2,
+              child: Image(
+                  image: AssetImage('images/mysuru_arrow.png'),
+                ),
             ),
           ],
         ),
