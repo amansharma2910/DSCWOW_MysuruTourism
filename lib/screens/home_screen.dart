@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travel_mysuru/widgets/custom_appbar.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -6,9 +7,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       resizeToAvoidBottomPadding: true,
       appBar: AppBar(
-        title: Text(
-          'Mysuru Tourism',
-        ),
+        title: CustomAppBar(),
       ),
       body: Container(
         color: Colors.blue,

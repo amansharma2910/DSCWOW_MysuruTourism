@@ -12,7 +12,7 @@ class TravelMysuru extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primaryColor: Color(0xff032541),
+        primaryColor: Colors.greenAccent,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: HomeScreen(),
