@@ -9,6 +9,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       resizeToAvoidBottomPadding: true,
       appBar: AppBar(
+        backgroundColor: Color(0xffd9923b),
         title: CustomAppBar(),
       ),
       body: Column(
