@@ -2,6 +2,10 @@
 
 Travel and Tourism is a very important aspect for the country's economy and India is known for it's beautiful tourist destinations. A place that is filled with tourists all throughout the year is Mysore. With it's great tourist friendly places, the place has definitely seen a huge loss in the number of people visiting due to Covid-19. So, to make Mysore come alive once again, we, at team elecTRON have come up with a idea that would not only benefit Mysore by attracting tourists, but would also award tourists that are visiting Mysore. <br>
 
+# Tools Used
+<img src="https://img.shields.io/badge/dart-%230175C2.svg?&style=for-the-badge&logo=dart&logoColor=white"/>  <img src="https://img.shields.io/badge/Flutter%20-%2302569B.svg?&style=for-the-badge&logo=Flutter&logoColor=white" />  <img src="https://img.shields.io/badge/firebase%20-%23039BE5.svg?&style=for-the-badge&logo=firebase"/> <img src="https://img.shields.io/badge/git%20-%23F05033.svg?&style=for-the-badge&logo=git&logoColor=white"/> <br>
+
+
 # Goal and Idea
 
 The goal of the Mysuru Track for Code off Duty was to develop a web-app or mobile application to attract more tourists and help the tourism industry comeback from the set back that occured due to the Covid-19 Pandemic.<br>
