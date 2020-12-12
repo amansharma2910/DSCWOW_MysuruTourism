@@ -64,6 +64,9 @@ class _CameraScreenState extends State {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.black.withOpacity(0.5),
+      ),
       body: Container(
         child: SafeArea(
           child: Column(
