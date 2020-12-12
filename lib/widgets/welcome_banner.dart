@@ -54,6 +54,7 @@ class WelcomeText extends StatelessWidget {
           children: [
             SizedBox(
               height: 120,
+              width: 120,
               child: FittedBox(
                 fit: BoxFit.fitHeight,
                 child: Image(

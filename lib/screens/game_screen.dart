@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:travel_mysuru/widgets/custom_appbar.dart';
+import 'package:travel_mysuru/widgets/mysuru_map.dart';
+
 
 class GameScreen extends StatelessWidget {
   @override
@@ -10,7 +11,7 @@ class GameScreen extends StatelessWidget {
           // title: CustomAppBar(),
       ),
       body: SingleChildScrollView(
-          MysuruMap(),
+          child: MysuruMap(),
       ),
     );
   }
