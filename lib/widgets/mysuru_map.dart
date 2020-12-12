@@ -14,10 +14,9 @@ class GMapCard extends StatefulWidget {
 }
 
 class _GMapCardState extends State<GMapCard> {
-
   GoogleMapController _controller;
 
-  List<Marker> markers = [];
+  List<Marker> allMarkers = [];
 
   List<List<String>> coordinates = [
     ['Mysore Palace', '12.3052', '76.6552'],
@@ -36,27 +35,29 @@ class _GMapCardState extends State<GMapCard> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    for(int i=0; i < coordinates.length; i++){
-      markers.add(Marker(markerId: MarkerId(coordinates[i][0]), position: LatLng(double.parse(coordinates[i][1]), double.parse(coordinates[i][2]))));
+    for (int i = 0; i < coordinates.length; i++) {
+      allMarkers.add(Marker(
+        draggable: false,
+          markerId: MarkerId(coordinates[i][0]),
+          position: LatLng(
+            double.parse(coordinates[i][1]),
+            double.parse(coordinates[i][2]),
+          )));
     }
   }
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery
-          .of(context)
-          .size
-          .height * 0.7,
-      width: MediaQuery
-          .of(context)
-          .size
-          .width,
+      height: MediaQuery.of(context).size.height * 0.7,
+      width: MediaQuery.of(context).size.width,
       child: GoogleMap(
+        markers: Set.from(allMarkers),
         mapType: MapType.normal,
         initialCameraPosition: CameraPosition(
           target: LatLng(12.2958, 76.6394),
           zoom: 12.0,
+          tilt: 45,
         ),
         onMapCreated: (controller) {
           setState(() {
@@ -72,4 +73,3 @@ class _GMapCardState extends State<GMapCard> {
     );
   }
 }
-

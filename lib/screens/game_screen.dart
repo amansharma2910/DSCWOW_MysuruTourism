@@ -7,6 +7,10 @@ class GameScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.white.withOpacity(0.3),
+          // title: CustomAppBar(),
+      ),
       body: SingleChildScrollView(
           child: Column(
             children: [
