@@ -10,7 +10,7 @@ class GameScreen extends StatelessWidget {
           // title: CustomAppBar(),
       ),
       body: SingleChildScrollView(
-
+          MysuruMap(),
       ),
     );
   }
