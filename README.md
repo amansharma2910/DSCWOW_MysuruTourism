@@ -1,3 +1,7 @@
+<p align="center">
+<img src="https://github.com/amansharma2910/DSCWOW_MysuruTourism/blob/master/images/LiveMysuru-Logo-Transparent.png" alt="drawing" width="200"/>
+</p>
+
 # LiveMysuru
 
 Travel and Tourism is a very important aspect for the country's economy and India is known for it's beautiful tourist destinations. A place that is filled with tourists all throughout the year is Mysore. With it's great tourist friendly places, the place has definitely seen a huge loss in the number of people visiting due to Covid-19. So, to make Mysore come alive once again, we, at team elecTRON have come up with an idea that would not only benefit Mysore by attracting tourists, but would also award tourists that are visiting Mysore. <br>
