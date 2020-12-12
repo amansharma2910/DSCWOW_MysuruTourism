@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-
 class MysuruMap extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -37,7 +36,10 @@ class _GMapCardState extends State<GMapCard> {
     super.initState();
     for (int i = 0; i < coordinates.length; i++) {
       allMarkers.add(Marker(
-        draggable: false,
+          draggable: false,
+          infoWindow: InfoWindow(
+            title: coordinates[i][0],
+          ),
           markerId: MarkerId(coordinates[i][0]),
           position: LatLng(
             double.parse(coordinates[i][1]),
