@@ -23,15 +23,5 @@ We came up with the idea of LiveMysuru. This is a mobile application which was d
 
 Upon implementation, this idea will not only help in increasing the amount of tourists visitng the place but would also help in boosting the partnered businesses by providing them with valuable customers who would be using the gift vouchers and coupons at their hotels and restaurants. This app has the potential to bring back life to the place and fill it with tourists once again. <br>
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# References
+For adding camera related functionalities - https://github.com/devplanet-dp/flutter_camera_app
