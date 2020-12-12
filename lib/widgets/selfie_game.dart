@@ -46,7 +46,7 @@ class Button extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             RaisedButton(
-
+              color: Colors.black.withOpacity(0.5),
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(18.0),
                   side: BorderSide(color: Colors.black38)
@@ -58,9 +58,7 @@ class Button extends StatelessWidget {
                   color: Colors.white,
                   fontWeight: FontWeight.w200
                 ),
-
               ),
-              //TODO: Implement the onclick method to route the app to the game screen once tapped
                 onPressed: () {
                   Navigator.push(
                     context,

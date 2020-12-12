@@ -52,6 +52,15 @@ class WelcomeText extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            SizedBox(
+              height: 120,
+              child: FittedBox(
+                fit: BoxFit.fitHeight,
+                child: Image(
+                  image: AssetImage('images/mysuru_logo.png'),
+                ),
+              ),
+            ),
             Text(
               'Welcome.',
               style: TextStyle(
