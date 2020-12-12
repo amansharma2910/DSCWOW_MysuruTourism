@@ -32,7 +32,7 @@ class _GMapCardState extends State<GMapCard> {
 
   @override
   void initState() {
-    // TODO: implement initState
+    // TODO: Add this data in firestore to update dynamically
     super.initState();
     for (int i = 0; i < coordinates.length; i++) {
       allMarkers.add(Marker(

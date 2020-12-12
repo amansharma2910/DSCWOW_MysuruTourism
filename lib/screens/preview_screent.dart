@@ -14,8 +14,8 @@ class PreviewScreen extends StatefulWidget{
 
   @override
   _PreviewScreenState createState() => _PreviewScreenState();
-
 }
+
 class _PreviewScreenState extends State<PreviewScreen>{
   @override
   Widget build(BuildContext context) {
@@ -60,3 +60,5 @@ class _PreviewScreenState extends State<PreviewScreen>{
     return ByteData.view(bytes.buffer);
   }
 }
+
+

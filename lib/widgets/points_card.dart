@@ -1,16 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:travel_mysuru/screens/redeem_points_screen.dart';
 
-int _points = 5;
-
 class PointsCard extends StatefulWidget {
   @override
   _PointsCardState createState() => _PointsCardState();
 }
 
 class _PointsCardState extends State<PointsCard> {
-  //TODO: Connect point count to firestore db
-  int points = 10000;
+
+  var _points;
+
+  @override
+  void initState() {
+    // TODO: implement initState such that at the time of initialization, it fetches data from firestore
+    super.initState();
+    setState(() {
+      _points = 105;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -21,12 +28,28 @@ class _PointsCardState extends State<PointsCard> {
       child: Row(
         children: [
           SizedBox(
-            width: 35,
+            width: 25,
           ),
-          // 
-          Points(),
+          //
+          Container(
+            margin: EdgeInsets.symmetric(vertical: 10),
+            decoration: BoxDecoration(
+                color: Colors.white.withOpacity(0.1),
+                borderRadius: BorderRadius.all(Radius.circular(30))),
+            child: Padding(
+              padding: EdgeInsets.all(10.0),
+              child: Text(
+                'Points: $_points',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 25,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+            ),
+          ),
           SizedBox(
-            width: 35,
+            width: 20,
           ),
           RaisedButton(
             onPressed: () {
@@ -47,36 +70,11 @@ class _PointsCardState extends State<PointsCard> {
                 color: Colors.white,
               ),
             ),
-          )
-        ],
-      ),
-    );
-  }
-}
-
-class Points extends StatefulWidget {
-  @override
-  _PointsState createState() => _PointsState();
-}
-
-class _PointsState extends State<Points> {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.symmetric(vertical: 10),
-      decoration: BoxDecoration(
-          color: Colors.white.withOpacity(0.1),
-          borderRadius: BorderRadius.all(Radius.circular(30))),
-      child: Padding(
-        padding: EdgeInsets.all(10.0),
-        child: Text(
-          'Points: $_points',
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 25,
-            fontWeight: FontWeight.w500,
           ),
-        ),
+          SizedBox(
+            width: 25,
+          ),
+        ],
       ),
     );
   }
