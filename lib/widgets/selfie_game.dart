@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travel_mysuru/screens/game_screen.dart';
 
 class GameBanner extends StatelessWidget {
   @override
@@ -60,7 +61,12 @@ class Button extends StatelessWidget {
 
               ),
               //TODO: Implement the onclick method to route the app to the game screen once tapped
-              // onPressed: playGame(),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => GameScreen()),
+                  );
+                }
             )
           ],
         ),
