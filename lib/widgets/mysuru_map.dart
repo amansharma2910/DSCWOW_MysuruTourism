@@ -1,5 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:geolocator/geolocator.dart';
+import 'package:firebase_core/firebase_core.dart';
+
+
+
 class MysuruMap extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -16,6 +22,7 @@ class _GMapCardState extends State<GMapCard> {
   GoogleMapController _controller;
 
   List<Marker> allMarkers = [];
+  var clients = [];
 
   List<List<String>> coordinates = [
     ['Mysore Palace', '12.3052', '76.6552'],
@@ -32,8 +39,8 @@ class _GMapCardState extends State<GMapCard> {
 
   @override
   void initState() {
-    // TODO: Add this data in firestore to update dynamically
     super.initState();
+    // populateClients();
     for (int i = 0; i < coordinates.length; i++) {
       allMarkers.add(Marker(
           draggable: false,
@@ -46,6 +53,35 @@ class _GMapCardState extends State<GMapCard> {
             double.parse(coordinates[i][2]),
           )));
     }
+  }
+
+  // @override
+  // void initState() {
+  //   super.initState();
+  //   populateClients();
+  //   for (int i = 0; i < clients.length; i++) {
+  //     allMarkers.add(Marker(
+  //         draggable: false,
+  //         infoWindow: InfoWindow(
+  //           title: clients[i]['place'],
+  //         ),
+  //         markerId: MarkerId(clients[i][0]),
+  //         position: LatLng(
+  //           clients[i]['location'].latitude,
+  //           clients[i]['location'].longitude,
+  //         )));
+  //   }
+  // }
+
+  populateClients() {
+    clients = [];
+    Firestore.instance.collection('markers').getDocuments().then((docs) {
+      if (docs.documents.isNotEmpty) {
+        for (int i = 0; i < docs.documents.length; ++i) {
+          clients.add(docs.documents[i].data);
+        }
+      }
+    });
   }
 
   @override

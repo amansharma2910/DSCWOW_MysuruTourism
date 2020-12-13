@@ -1,21 +1,30 @@
 import 'package:flutter/material.dart';
 import 'package:travel_mysuru/screens/redeem_points_screen.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class PointsCard extends StatefulWidget {
   @override
   _PointsCardState createState() => _PointsCardState();
 }
 
+var redeemable_points;
+
 class _PointsCardState extends State<PointsCard> {
 
-  var _points;
-
+  var points = [];
   @override
   void initState() {
-    // TODO: implement initState such that at the time of initialization, it fetches data from firestore
     super.initState();
     setState(() {
-      _points = 105;
+      // redeemable_points = 105;
+      Firestore.instance.collection('points').getDocuments().then((docs) {
+        if (docs.documents.isNotEmpty) {
+          for (int i = 0; i < docs.documents.length; ++i) {
+            points.add(docs.documents[i].data);
+          }
+        }
+      });
+      redeemable_points = points[0]['points'];
     });
   }
 
@@ -39,7 +48,7 @@ class _PointsCardState extends State<PointsCard> {
             child: Padding(
               padding: EdgeInsets.all(10.0),
               child: Text(
-                'Points: $_points',
+                'Points: $redeemable_points',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 25,

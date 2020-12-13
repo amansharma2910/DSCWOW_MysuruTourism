@@ -4,6 +4,7 @@ import 'package:travel_mysuru/widgets/game_info.dart';
 import 'package:travel_mysuru/widgets/points_card.dart';
 
 
+
 class GameScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

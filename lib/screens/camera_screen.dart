@@ -4,6 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:travel_mysuru/screens/preview_screent.dart';
 import 'package:path/path.dart';
 import 'package:path_provider/path_provider.dart';
+import 'package:geolocator/geolocator.dart';
+import 'package:travel_mysuru/widgets/points_card.dart';
+import 'package:travel_mysuru/widgets/mysuru_map.dart';
 
 class CameraScreen extends StatefulWidget {
   @override
@@ -15,6 +18,8 @@ class _CameraScreenState extends State {
   List cameras;
   int selectedCameraIndex;
   String imgPath;
+  var currentLocation;
+  bool at_marker;
 
   @override
   void initState() {
@@ -33,6 +38,13 @@ class _CameraScreenState extends State {
     }).catchError((err) {
       print('Error :${err.code}Error message : ${err.message}');
     });
+
+    Geolocator.getCurrentPosition().then((currLoc){
+      setState(() {
+        currentLocation = currLoc;
+      });
+    });
+
   }
 
   Future _initCameraController(CameraDescription cameraDescription) async {
@@ -215,6 +227,8 @@ class _CameraScreenState extends State {
     CameraDescription selectedCamera = cameras[selectedCameraIndex];
     _initCameraController(selectedCamera);
   }
+
+
 }
 
 
