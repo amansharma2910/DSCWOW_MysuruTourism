@@ -37,41 +37,25 @@ class _GMapCardState extends State<GMapCard> {
     ["Nagarahole National Park", "12.0314", "76.1207"]
   ];
 
+
+
   @override
   void initState() {
     super.initState();
-    // populateClients();
-    for (int i = 0; i < coordinates.length; i++) {
+    populateClients();
+    for (int i = 0; i < clients.length; i++) {
       allMarkers.add(Marker(
           draggable: false,
           infoWindow: InfoWindow(
-            title: coordinates[i][0],
+            title: clients[i]['place'],
           ),
-          markerId: MarkerId(coordinates[i][0]),
+          markerId: MarkerId(clients[i][0]),
           position: LatLng(
-            double.parse(coordinates[i][1]),
-            double.parse(coordinates[i][2]),
+            clients[i]['location'].latitude,
+            clients[i]['location'].longitude,
           )));
     }
   }
-
-  // @override
-  // void initState() {
-  //   super.initState();
-  //   populateClients();
-  //   for (int i = 0; i < clients.length; i++) {
-  //     allMarkers.add(Marker(
-  //         draggable: false,
-  //         infoWindow: InfoWindow(
-  //           title: clients[i]['place'],
-  //         ),
-  //         markerId: MarkerId(clients[i][0]),
-  //         position: LatLng(
-  //           clients[i]['location'].latitude,
-  //           clients[i]['location'].longitude,
-  //         )));
-  //   }
-  // }
 
   populateClients() {
     clients = [];
